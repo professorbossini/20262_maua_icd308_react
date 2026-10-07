@@ -1,18 +1,26 @@
+import './styles.css'
 function App(){
+  const estilosBotao = {marginTop: 12, paddingTop: 8, paddingBottom: 8, backgroundColor: 'blueviolet', color: 'white', border: 'none', width: '100%', borderRadius: 8}
+
+  const textoDoRotulo = 'Nome:'
+  const obterTextoBotao = () => 'Enviar'
+  const aoClicar = () => alert('clicou')
   return (
     <div style={{margin: 'auto', width: 768, backgroundColor: '#EEE', padding: 12, borderRadius: 8}}>
-      <label 
+      <label
+        className='rotulo' 
         style={{display: 'block', marginBottom: 4}}
         htmlFor="nome">
-        Nome:
+        {textoDoRotulo}
       </label> 
       <input 
         id="nome" 
         type="text"
         style={{paddingTop: 8, paddingBottom: 8, borderStyle: 'hidden', width: '100%', borderRadius: 8, outline: 'none'}} />
       <button
-        style={{marginTop: 12, paddingTop: 8, paddingBottom: 8, backgroundColor: 'blueviolet', color: 'white', border: 'none', width: '100%', borderRadius: 8}}>
-        Enviar
+        onClick={() => aoClicar()}
+        style={estilosBotao}>
+        {obterTextoBotao()}
       </button> 
     </div>
   )
