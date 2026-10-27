@@ -19,16 +19,32 @@ const App = () => {
       
       <div className="row">
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido />   
+          <Pedido 
+            data="22/10/2025"
+            icone="book"
+            titulo="Livro"
+            descricao="O pequeno principe"/>   
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido />
+          <Pedido 
+            data="23/10/2025"
+            icone="bicycle"
+            titulo="Bicicleta"
+            descricao="Uma bicicleta"/>
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido />
+          <Pedido 
+            data="21/05/2026"
+            icone="pen"
+            titulo="Caneta"
+            descricao="Uma caneta BIC"/>
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido /> 
+          <Pedido 
+            data="21/05/2026"
+            icone="martini-glass"
+            titulo="Martini"
+            descricao="Mexido, não batido"/> 
         </div>
       </div>
 
