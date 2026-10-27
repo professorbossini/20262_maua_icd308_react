@@ -1,7 +1,16 @@
 // rafce
 import React from 'react'
 import Pedido from './Pedido'
+import Cartao from './Cartao'
+import Feedback from './Feedback'
 const App = () => {
+  const componenteFeedback = (
+    <Feedback 
+      textoOK="Já chegou"
+      textoNOK="Não chegou ainda"
+      funcaoOK={() => alert("Agradecemos o feedback")}
+      funcaoNOK={() => alert("Verificaremos o ocorrido")}/>
+  )
   return (
     <div className='container border rounded mt-2 py-3'>
 
@@ -19,32 +28,40 @@ const App = () => {
       
       <div className="row">
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido 
-            data="22/10/2025"
-            icone="book"
-            titulo="Livro"
-            descricao="O pequeno principe"/>   
+          <Cartao cabecalho="22/10/2025">
+            <Pedido 
+              icone="book"
+              titulo="Livro"
+              descricao="O pequeno principe"/>
+            {componenteFeedback}
+          </Cartao>
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido 
-            data="23/10/2025"
-            icone="bicycle"
-            titulo="Bicicleta"
-            descricao="Uma bicicleta"/>
+          <Cartao cabecalho="23/10/2025">
+            <Pedido 
+              icone="bicycle"
+              titulo="Bicicleta"
+              descricao="Uma bicicleta"/>
+            {componenteFeedback}
+          </Cartao>
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido 
-            data="21/05/2026"
-            icone="pen"
-            titulo="Caneta"
-            descricao="Uma caneta BIC"/>
+          <Cartao cabecalho="21/05/2026">
+            <Pedido 
+              icone="pen"
+              titulo="Caneta"
+              descricao="Uma caneta BIC"/>
+            {componenteFeedback}
+          </Cartao>
         </div>
         <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-          <Pedido 
-            data="21/05/2026"
-            icone="martini-glass"
-            titulo="Martini"
-            descricao="Mexido, não batido"/> 
+          <Cartao cabecalho="21/05/2026">
+            <Pedido 
+              icone="martini-glass"
+              titulo="Martini"
+              descricao="Mexido, não batido"/>
+            {componenteFeedback}
+          </Cartao>
         </div>
       </div>
 
